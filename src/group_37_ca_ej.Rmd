@@ -1,6 +1,6 @@
 ---
 title: "Group 37 CA Pollution Burden"
-author: "Tommy King"
+author: "Tommy King & German Silva"
 date: "11/13/2021"
 output: html_document
 ---
@@ -21,12 +21,13 @@ ces <- read_csv(here("data", "ces3demographics.csv")) %>%
   clean_names()
 ```
 
-German:
 ```{r}
 ggplot(data = ces, aes(x= white_percent, y = ces_3_0_score))+
   geom_hex() + 
   labs(x = "% of White Population", 
        y = "CalEnviroScreen pollution score", 
-       title = "White Population Pollution Burden Score")
+       title = "White Population Pollution Burden Score") +
+  scale_fill_gradient(low = "grey", high = "darkred") +
+  theme_minimal()
 ```
 
