@@ -5,7 +5,7 @@ date: "11/13/2021"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
+```{r setup, include = TRUE, warning = FALSE, message = FALSE}
 knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
 
 # installing necessary packages
@@ -26,7 +26,16 @@ ggplot(data = ces, aes(x= white_percent, y = ces_3_0_score))+
   geom_hex() + 
   labs(x = "% of White Population", 
        y = "CalEnviroScreen pollution score", 
-       title = "White Population Pollution Burden Score") +
+       title = "White Population Pollution Burden Score", 
+       caption = "Figure 1: White Population Pollution Burden Score: 
+       Negative Correlation between percentage of white population and 
+       pollution burdens within these communities. Namely, the higher amount 
+       of white people within a commuity, the less likely it is for that 
+       community to be affected by hazardous pollution, determined by the
+       CalEnviroScreen Pollutoin Burden test to analyze marginalized 
+       communities and the environmental injustices they have received 
+       due to inequitable pollution.") +
+  theme(figure.caption = element_text(hjust = 0)) +
   scale_fill_gradient(low = "grey", high = "darkred") +
   theme_minimal()
 ```
