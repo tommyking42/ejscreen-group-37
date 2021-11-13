@@ -1,0 +1,22 @@
+---
+title: "Group 37 CA Pollution Burden"
+author: "Tommy King"
+date: "11/13/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+
+# installing necessary packages
+library(tidyverse)
+library(janitor)
+library(here)
+```
+
+```{r}
+# Reading in the data 
+ces <- read_csv(here("data", "ces3demographics.csv")) %>% 
+  clean_names()
+```
+
