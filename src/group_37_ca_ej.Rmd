@@ -40,7 +40,7 @@ ggplot(data = ces, aes(x= white_percent, y = ces_3_0_score))+
   theme(plot.caption = element_text(hjust = 0), plot.title = element_text(hjust = 0.5))
 ```
 
-As shown in Figure 1, there is a general downhill trend between the percent of the population that is White and the CalEnviroScreen pollution burden score meaning that on average as the percentage of the population that is White increses the pollution burden score decreases. 
+As shown in Figure 1, there is a general downhill trend between the percent of the population that is White and the CalEnviroScreen pollution burden score meaning that on average as the percentage of the population that is White increases the pollution burden score decreases. 
 
 Data Sources:
 
