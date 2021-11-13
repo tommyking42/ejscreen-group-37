@@ -12,6 +12,7 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
 library(tidyverse)
 library(janitor)
 library(here)
+library(hexbin)
 ```
 
 ```{r}
@@ -23,6 +24,9 @@ ces <- read_csv(here("data", "ces3demographics.csv")) %>%
 German:
 ```{r}
 ggplot(data = ces, aes(x= white_percent, y = ces_3_0_score))+
-  geom_point()
+  geom_hex() + 
+  labs(x = "% of White Population", 
+       y = "CalEnviroScreen pollution score", 
+       title = "White Population Pollution Burden Score")
 ```
 
